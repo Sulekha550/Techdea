@@ -1,0 +1,1 @@
+export default function StatsCard({ label, value }) { return <div className="admin-stat"><span>{label}</span><strong>{value}</strong></div>;

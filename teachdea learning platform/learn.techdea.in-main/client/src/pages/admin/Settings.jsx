@@ -1,0 +1,3 @@
+export default function Settings() {
+  return <div><div className="admin-page-head"><div><div className="eyebrow">SYSTEM</div><h1>Settings</h1><p>Platform settings and configuration.</p></div></div><div className="admin-welcome"><h2>TechDea Learn</h2><p>Backend URL and environment configuration are managed through the server .env file. Never expose JWT secrets or database credentials in the frontend.</p></div></div>;
+}
