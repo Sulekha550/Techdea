@@ -35,10 +35,14 @@ export function AuthProvider({ children }) {
         const { data } = await getMe();
         setUser(data.user);
         localStorage.setItem("techdea_user", JSON.stringify(data.user));
-      } catch {
-        localStorage.removeItem("techdea_token");
-        localStorage.removeItem("techdea_user");
-        setUser(null);
+      } catch (err) {
+        // Only clear session if server explicitly returned 401 Unauthorized
+        // For network/offline errors, preserve cached session
+        if (err?.response?.status === 401) {
+          localStorage.removeItem("techdea_token");
+          localStorage.removeItem("techdea_user");
+          setUser(null);
+        }
       } finally {
         setLoading(false);
       }
@@ -72,7 +76,7 @@ export function AuthProvider({ children }) {
   };
 
   const value = useMemo(
-    () => ({ user, loading, login, adminLogin, register, logout }),
+    () => ({ user, setUser, loading, login, adminLogin, register, logout }),
     [user, loading]
   );
 

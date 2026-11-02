@@ -332,10 +332,24 @@ export default function Footer() {
           {/* Company */}
           <div className="footer-company">
 
-            <h2 className="footer-logo">
-              <span className="tech">Tech</span>
-              <span className="dea">Dea</span>
-            </h2>
+            <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 16 }}>
+              <img
+                src="/logo.png"
+                alt="TechDea"
+                style={{
+                  width: 48,
+                  height: 48,
+                  borderRadius: "50%",
+                  objectFit: "contain",
+                  boxShadow: "0 0 20px rgba(124, 58, 237, 0.5)",
+                  border: "1.5px solid rgba(167, 139, 250, 0.4)"
+                }}
+              />
+              <h2 className="footer-logo" style={{ margin: 0 }}>
+                <span className="tech">Tech</span>
+                <span className="dea">Dea</span>
+              </h2>
+            </div>
 
             <p>
               TechDea creates innovative software, responsive
@@ -352,11 +366,14 @@ export default function Footer() {
             <h4>Quick Links</h4>
 
             <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <Link to="/courses">Courses &amp; Bootcamps</Link>
+            <Link to="/about">About Us</Link>
             <Link to="/services">Services</Link>
             <Link to="/training">Training</Link>
-            <Link to="/courses">Courses</Link>
             <Link to="/contact">Contact</Link>
+            <Link to="/admin" style={{ color: "#C084FC", fontWeight: 750 }}>
+              ⚡ Admin Panel (Dashboard)
+            </Link>
 
           </div>
 

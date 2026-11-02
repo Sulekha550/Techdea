@@ -32,8 +32,11 @@ export default function StudentLayout() {
       {open && <div className="sidebar-overlay open" onClick={close} />}
 
       <aside className={`student-sidebar ${open ? "open" : ""}`}>
-        <div className="portal-logo" style={{ display: "flex", justifyContent: "space-between" }}>
-          <span>Tech<span>Dea</span></span>
+        <div className="portal-logo" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <img src="/logo.png" alt="TechDea" style={{ width: 30, height: 30, borderRadius: "50%", boxShadow: "0 0 10px rgba(124, 58, 237, 0.4)" }} />
+            <span>Tech<span>Dea</span></span>
+          </div>
           <button type="button" className="sidebar-toggle" style={{ width: "auto", padding: 0, background: "transparent" }} onClick={close} aria-label="Close menu">
             <FiX />
           </button>

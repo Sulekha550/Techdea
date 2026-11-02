@@ -38,8 +38,8 @@ export default function About() {
     <>
       <style>{`
         .about-page {
-          background: #f8fafc;
-          color: #0f172a;
+          background: #FAF9FF;
+          color: #211A32;
         }
 
         /* =========================
@@ -53,16 +53,16 @@ export default function About() {
           background:
             radial-gradient(
               circle at 90% 10%,
-              rgba(99, 102, 241, 0.14),
+              rgba(124, 58, 237, 0.12),
               transparent 30%
             ),
             radial-gradient(
               circle at 5% 85%,
-              rgba(124, 58, 237, 0.08),
+              rgba(139, 92, 246, 0.08),
               transparent 28%
             ),
             #ffffff;
-          border-bottom: 1px solid #e2e8f0;
+          border-bottom: 1px solid #E7E0F3;
         }
 
         .about-hero-inner {
@@ -78,12 +78,12 @@ export default function About() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          padding: 7px 12px;
+          padding: 7px 14px;
           margin-bottom: 20px;
-          border: 1px solid #e0e7ff;
+          border: 1px solid #DDD6FE;
           border-radius: 999px;
-          background: #eef2ff;
-          color: #4f46e5;
+          background: #F5F3FF;
+          color: #7C3AED;
           font-size: 12px;
           font-weight: 800;
           letter-spacing: 0.08em;
@@ -94,7 +94,7 @@ export default function About() {
           width: 6px;
           height: 6px;
           border-radius: 50%;
-          background: #6366f1;
+          background: #7C3AED;
         }
 
         .about-hero h1 {
@@ -104,17 +104,21 @@ export default function About() {
           line-height: 1.06;
           letter-spacing: -2.6px;
           font-weight: 800;
-          color: #0f172a;
+          color: #211A32;
         }
 
         .about-hero h1 span {
-          color: #4f46e5;
+          color: #7C3AED;
+          background: linear-gradient(135deg, #7C3AED 0%, #9333EA 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
 
         .about-hero-description {
           max-width: 600px;
           margin: 23px 0 30px;
-          color: #64748b;
+          color: #6B6478;
           font-size: 17px;
           line-height: 1.75;
         }
@@ -142,29 +146,29 @@ export default function About() {
         }
 
         .about-primary-btn {
-          border: 1px solid #4f46e5;
-          background: #4f46e5;
+          border: 1px solid #7C3AED;
+          background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
           color: #ffffff;
-          box-shadow: 0 8px 22px rgba(79, 70, 229, 0.18);
+          box-shadow: 0 8px 22px rgba(124, 58, 237, 0.28);
         }
 
         .about-primary-btn:hover {
-          background: #4338ca;
-          border-color: #4338ca;
+          background: linear-gradient(135deg, #6D28D9 0%, #5B21B6 100%);
+          border-color: #5B21B6;
           transform: translateY(-2px);
-          box-shadow: 0 12px 28px rgba(79, 70, 229, 0.25);
+          box-shadow: 0 12px 28px rgba(124, 58, 237, 0.38);
         }
 
         .about-secondary-btn {
-          border: 1px solid #e2e8f0;
+          border: 1px solid #E7E0F3;
           background: #ffffff;
-          color: #334155;
+          color: #211A32;
         }
 
         .about-secondary-btn:hover {
-          border-color: #c7d2fe;
-          background: #f8fafc;
-          color: #4f46e5;
+          border-color: #C4B5FD;
+          background: #FAF9FF;
+          color: #7C3AED;
           transform: translateY(-2px);
         }
 
@@ -244,8 +248,8 @@ export default function About() {
           align-items: center;
           justify-content: center;
           border-radius: 8px;
-          background: #eef2ff;
-          color: #4f46e5;
+          background: #EDE9FE;
+          color: #7C3AED;
         }
 
         .about-image-status {
@@ -272,16 +276,16 @@ export default function About() {
           align-items: center;
           gap: 10px;
           padding: 12px 15px;
-          border: 1px solid #e2e8f0;
+          border: 1px solid #E7E0F3;
           border-radius: 13px;
           background: #ffffff;
-          box-shadow: 0 15px 35px rgba(15, 23, 42, 0.13);
+          box-shadow: 0 15px 35px rgba(124, 58, 237, 0.08);
           font-size: 12px;
           font-weight: 800;
         }
 
         .about-floating-stat svg {
-          color: #4f46e5;
+          color: #7C3AED;
           font-size: 18px;
         }
 
@@ -350,12 +354,12 @@ export default function About() {
         }
 
         .about-story-badge svg {
-          color: #4f46e5;
+          color: #7C3AED;
         }
 
         .about-label {
           margin-bottom: 10px;
-          color: #4f46e5;
+          color: #7C3AED;
           font-size: 12px;
           font-weight: 800;
           letter-spacing: 0.08em;
@@ -395,7 +399,7 @@ export default function About() {
         }
 
         .about-check svg {
-          color: #4f46e5;
+          color: #7C3AED;
         }
 
         /* =========================
@@ -427,7 +431,7 @@ export default function About() {
 
         .about-value-card {
           overflow: hidden;
-          border: 1px solid #e2e8f0;
+          border: 1px solid #E7E0F3;
           border-radius: 18px;
           background: #ffffff;
           box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
@@ -436,8 +440,8 @@ export default function About() {
 
         .about-value-card:hover {
           transform: translateY(-6px);
-          border-color: #c7d2fe;
-          box-shadow: 0 20px 42px rgba(15, 23, 42, 0.09);
+          border-color: #C4B5FD;
+          box-shadow: 0 20px 42px rgba(124, 58, 237, 0.12);
         }
 
         .about-value-image {
@@ -469,8 +473,8 @@ export default function About() {
           align-items: center;
           justify-content: center;
           border-radius: 12px;
-          background: #eef2ff;
-          color: #4f46e5;
+          background: #EDE9FE;
+          color: #7C3AED;
           font-size: 20px;
         }
 
@@ -497,7 +501,8 @@ export default function About() {
           align-items: center;
           padding: 45px;
           border-radius: 24px;
-          background: #0f172a;
+          background: #151515;
+          border: 1px solid rgba(255, 255, 255, 0.08);
           color: #ffffff;
         }
 
@@ -529,7 +534,7 @@ export default function About() {
         }
 
         .about-platform-point svg {
-          color: #818cf8;
+          color: #A78BFA;
         }
 
         .about-platform-visual {
@@ -542,9 +547,9 @@ export default function About() {
           align-items: center;
           gap: 14px;
           padding: 17px;
-          border: 1px solid #334155;
+          border: 1px solid rgba(124, 58, 237, 0.2);
           border-radius: 13px;
-          background: #172033;
+          background: #1E1B29;
           transition: transform 0.2s ease;
         }
 
@@ -560,8 +565,8 @@ export default function About() {
           align-items: center;
           justify-content: center;
           border-radius: 10px;
-          background: #252f4a;
-          color: #818cf8;
+          background: rgba(124, 58, 237, 0.2);
+          color: #A78BFA;
         }
 
         .about-platform-box strong {
@@ -591,15 +596,15 @@ export default function About() {
           overflow: hidden;
           padding: 50px 30px;
           text-align: center;
-          border: 1px solid #e0e7ff;
+          border: 1px solid #DDD6FE;
           border-radius: 24px;
           background:
             radial-gradient(
               circle at 15% 30%,
-              rgba(99, 102, 241, 0.13),
+              rgba(124, 58, 237, 0.14),
               transparent 30%
             ),
-            linear-gradient(135deg, #eef2ff, #f5f3ff);
+            linear-gradient(135deg, #FAF9FF, #F5F3FF);
         }
 
         .about-cta-box h2 {
