@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FiBookOpen, FiArrowRight, FiCheckCircle } from "react-icons/fi";
 import { getMyEnrollments, getProgressSummary } from "../../services/courseService.js";
 import Loader from "../../components/common/Loader.jsx";
+import { getCuratedThumbnail } from "../../components/course/CourseCard.jsx";
 
 export default function MyCourses() {
   const [enrollments, setEnrollments] = useState([]);
@@ -74,10 +75,14 @@ export default function MyCourses() {
                   boxShadow: "var(--shadow-sm)"
                 }}
               >
-                <div style={{ position: "relative", aspectRatio: "16/9", background: "#1E1B2B" }}>
+                <div style={{ position: "relative", aspectRatio: "16/9", background: "#1E1B2B", overflow: "hidden" }}>
                   <img
-                    src={course.thumbnail || course.image || "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop"}
+                    src={getCuratedThumbnail(course)}
                     alt={course.name}
+                    loading="eager"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80";
+                    }}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />
                   <span className="course-badge-level">{course.level || "All Levels"}</span>

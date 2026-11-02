@@ -1045,7 +1045,7 @@ img { max-width: 100%; }
   position: relative;
   width: 100%;
   aspect-ratio: 16/9.5;
-  background: #0F172A;
+  background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 60%, #312E81 100%);
   overflow: hidden;
 }
 .course-card-thumb {
@@ -3669,39 +3669,286 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* ========================================================
+   GLOBAL MOBILE VIEWPORT ENFORCEMENT
+   ======================================================== */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100%;
+  position: relative;
+}
+
+/* ========================================================
    RESPONSIVE QUERIES FOR REDESIGNED ELEMENTS
    ======================================================== */
 @media (max-width: 1024px) {
+  .container {
+    width: min(var(--container), calc(100% - 32px));
+  }
   .hero-grid-modern {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
+    text-align: center;
+  }
+  .hero-pill-badge {
+    margin: 0 auto 16px;
+  }
+  .hero-headline-ultra {
+    margin: 0 auto 16px;
+  }
+  .hero-subtext {
+    margin: 0 auto 24px;
+  }
+  .hero-action-buttons {
+    justify-content: center;
+  }
+  .hero-trust-checks {
+    justify-content: center;
+  }
+  .hero-metrics-strip {
+    margin: 0 auto;
   }
   .admin-spotlight-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
   .advantage-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
+  }
+  .course-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .roadmaps-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 
-@media (max-width: 640px) {
-  .hero-metrics-strip {
+@media (max-width: 768px) {
+  .section {
+    padding: 44px 0;
+  }
+  .hero-modern {
+    padding: 32px 0 48px;
+  }
+  .hero-headline-ultra {
+    font-size: clamp(23px, 5.8vw, 32px);
+    line-height: 1.22;
+  }
+  .hero-subtext {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .hero-action-buttons {
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
     gap: 12px;
+  }
+  .btn-hero-primary,
+  .btn-hero-admin {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-trust-checks {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-metrics-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 16px;
   }
   .metric-divider {
     display: none;
   }
+  .metric-box {
+    text-align: left;
+  }
+  .metric-value {
+    font-size: 17px;
+  }
+  .metric-label {
+    font-size: 10.5px;
+  }
+
+  /* Hero Image Frame on Mobile */
+  .hero-image-showcase {
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .hero-image-frame {
+    width: 100%;
+    max-width: 100%;
+    height: 280px;
+    border-radius: 20px;
+  }
+  .hero-main-photo {
+    border-radius: 20px;
+  }
+  .badge-top-right {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+  }
+  .badge-bottom-left {
+    bottom: 10px;
+    left: 10px;
+    padding: 6px 10px;
+  }
+  .badge-bottom-right {
+    display: none;
+  }
+  .hero-glass-badge {
+    gap: 6px;
+    padding: 6px 10px;
+  }
+  .hero-glass-badge strong {
+    font-size: 11px;
+  }
+  .hero-glass-badge span {
+    font-size: 9px;
+  }
+  .badge-icon-box {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  /* Course Card & Grid Mobile */
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .course-card-body {
+    padding: 18px 16px;
+  }
+  .course-card-title {
+    font-size: 17px;
+    min-height: auto;
+  }
+  .course-card-meta {
+    font-size: 12px;
+    gap: 8px;
+    padding: 10px 0;
+  }
+  .course-card-footer {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .btn-course-explore {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  /* Catalog / Courses Page */
+  .catalog-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .search-input-wrap {
+    width: 100%;
+    min-width: 100%;
+  }
+  .filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+  }
+  .filter-tab {
+    padding: 6px 12px;
+    font-size: 12.5px;
+  }
+
+  /* Admin Spotlight Card */
   .admin-spotlight-card {
-    padding: 32px 20px;
+    padding: 28px 16px;
+    border-radius: 20px;
+  }
+  .admin-spotlight-left h2 {
+    font-size: 24px;
+  }
+  .btn-launch-admin {
+    width: 100%;
+    justify-content: center;
+  }
+  .admin-preview-window {
+    width: 100%;
+    overflow-x: auto;
   }
   .mockup-kpi-grid {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
   .mockup-action-buttons {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* Final CTA */
+  .final-cta-card {
+    padding: 40px 18px;
+    border-radius: 20px;
+  }
+  .final-cta-content h2 {
+    font-size: 24px;
+  }
+  .final-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .btn-cta-explore,
+  .btn-cta-admin,
+  .btn-cta-contact {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 20px);
+  }
+  .hero-pill-badge {
+    font-size: 11.5px;
+    padding: 5px 12px;
+  }
+  .hero-headline-ultra {
+    font-size: 24px;
+    letter-spacing: -0.015em;
+  }
+  .hero-image-frame {
+    height: 240px;
+  }
+  .hero-glass-badge {
+    padding: 4px 8px;
+  }
+  .badge-icon-box {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+  }
+  .hero-metrics-strip {
     grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .metric-value {
+    font-size: 15px;
+  }
+  .metric-label {
+    font-size: 9.5px;
   }
 }

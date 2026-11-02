@@ -58,7 +58,7 @@ const DEFAULT_FEATURED_COURSES = [
     studentsCount: 1950,
     duration: "12 Weeks",
     instructor: { name: "Pooja Sundaram (AI Research Lead)" },
-    thumbnail: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     shortDescription: "Build real-world production GenAI apps, RAG pipelines, LangChain, vector databases, and fine-tune models."
   },
   {
@@ -370,30 +370,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ================= HIRING TECH PARTNERS MARQUEE ================= */}
-      <section className="hiring-partners-strip">
-        <div className="container">
-          <div className="hiring-strip-inner">
-            <span className="hiring-strip-label">
-              GRADUATES HIRED AT TOP TECH ENTERPRISES
-            </span>
-            <div className="hiring-logos-row">
-              <span className="partner-pill"><span className="partner-dot dot-google" /> Google</span>
-              <span className="partner-pill"><span className="partner-dot dot-msft" /> Microsoft</span>
-              <span className="partner-pill"><span className="partner-dot dot-aws" /> Amazon AWS</span>
-              <span className="partner-pill"><span className="partner-dot dot-meta" /> Meta</span>
-              <span className="partner-pill"><span className="partner-dot dot-razorpay" /> Razorpay</span>
-              <span className="partner-pill"><span className="partner-dot dot-tcs" /> TCS Digital</span>
-              <span className="partner-pill"><span className="partner-dot dot-infosys" /> Infosys</span>
-              <span className="partner-pill"><span className="partner-dot dot-flipkart" /> Flipkart</span>
-              <span className="partner-pill"><span className="partner-dot dot-techm" /> Tech Mahindra</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= ADMIN CONTROL CENTER SPOTLIGHT ================= */}
       <section className="section-admin-spotlight">
         <div className="container">
           <div className="admin-spotlight-card">

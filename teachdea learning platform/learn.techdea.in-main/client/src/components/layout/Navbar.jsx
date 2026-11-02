@@ -296,33 +296,102 @@ export default function Navbar() {
           cursor: pointer;
         }
 
-        @media (max-width: 1080px) {
+        /* ========================================================
+           RESPONSIVE NAVBAR MEDIA QUERIES (FLUID FOR ALL PHONES)
+           ======================================================== */
+        @media (max-width: 1024px) {
           .nav-links-center {
+            display: none !important;
+          }
+          .btn-nav-login,
+          .btn-nav-register,
+          .btn-student-portal,
+          .btn-nav-logout {
+            display: none !important;
+          }
+          .mobile-hamburger {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .navbar-modern {
+            height: 64px;
+          }
+          .nav-inner-modern {
+            height: 64px;
+            width: calc(100% - 24px);
+            gap: 10px;
+          }
+          .techdea-logo-modern {
+            width: 36px;
+            height: 36px;
+          }
+          .brand-title {
+            font-size: 19px;
+          }
+          .brand-subtitle {
+            display: none !important;
+          }
+          .btn-admin-panel {
+            padding: 6px 12px;
+            font-size: 12.5px;
+            gap: 6px;
+          }
+          .admin-live-pill {
+            display: none !important;
+          }
+          .mobile-menu-drawer {
+            top: 64px;
+            height: calc(100vh - 64px);
+            padding: 18px 16px 36px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .nav-inner-modern {
+            width: calc(100% - 16px);
+            gap: 8px;
+          }
+          .brand-title {
+            font-size: 18px;
+          }
+          .brand-link {
+            gap: 8px;
+          }
+          .btn-admin-panel {
+            padding: 5px 10px;
+            font-size: 11.5px;
+          }
+          .admin-btn-word-panel {
             display: none;
           }
           .mobile-hamburger {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 6px 8px;
+            font-size: 20px;
           }
         }
 
         /* MOBILE OVERLAY & MENU */
         .mobile-menu-drawer {
           position: fixed;
-          top: 78px;
+          top: 64px;
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(11, 10, 16, 0.98);
+          background: #0B0A12;
           backdrop-filter: blur(25px);
-          padding: 24px 20px;
+          -webkit-backdrop-filter: blur(25px);
+          padding: 20px 16px 36px;
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 10px;
           overflow-y: auto;
-          z-index: 999;
-          border-top: 1px solid rgba(139, 92, 246, 0.2);
+          -webkit-overflow-scrolling: touch;
+          z-index: 9999;
+          border-top: 1px solid rgba(139, 92, 246, 0.25);
           animation: drawerSlide 0.25s ease;
         }
 
@@ -415,7 +484,7 @@ export default function Navbar() {
               title="Launch Complete Admin Dashboard"
             >
               <FiShield className="admin-icon-shield" />
-              <span>Admin Panel</span>
+              <span>Admin<span className="admin-btn-word-panel"> Panel</span></span>
               <span className="admin-live-pill">
                 <span className="admin-pulse-dot" />
                 Live

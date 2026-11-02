@@ -31,7 +31,7 @@ const FALLBACK_COURSES = [
     studentsCount: 1950,
     duration: "12 Weeks",
     instructor: { name: "Pooja Sundaram (AI Research Lead)" },
-    thumbnail: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+    thumbnail: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     shortDescription: "Build real-world production GenAI apps, RAG pipelines, LangChain, vector databases, and fine-tune models."
   },
   {

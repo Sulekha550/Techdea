@@ -789,26 +789,96 @@ export default function Services() {
         @media (max-width: 992px) {
           .srv-hero-grid {
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 36px;
+            text-align: center;
+          }
+          .srv-eyebrow {
+            margin: 0 auto 16px;
+          }
+          .srv-hero-desc {
+            margin: 0 auto 24px;
+          }
+          .srv-hero-actions {
+            justify-content: center;
+          }
+          .srv-stats-row {
+            margin: 0 auto;
           }
           .srv-process-grid {
             grid-template-columns: 1fr 1fr;
-          }
-          .srv-stats-row {
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
           }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
+          .srv-hero-section {
+            padding: 32px 16px 44px;
+          }
+          .srv-hero-title {
+            font-size: clamp(23px, 5.8vw, 32px);
+          }
+          .srv-hero-desc {
+            font-size: 14px;
+            line-height: 1.55;
+          }
+          .srv-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+          .srv-btn-primary,
+          .srv-btn-secondary {
+            width: 100%;
+            justify-content: center;
+          }
+          .srv-stats-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            width: 100%;
+            padding: 12px 14px;
+          }
+          .srv-stat-divider {
+            display: none;
+          }
+          .srv-visual-frame {
+            width: 100%;
+            height: 270px;
+          }
+          .srv-catalog-section,
+          .srv-process-section,
+          .srv-cta-section {
+            padding: 44px 16px;
+          }
+          .srv-filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+          }
+          .srv-filter-btn {
+            padding: 6px 12px;
+            font-size: 12.5px;
+          }
           .srv-cards-grid {
             grid-template-columns: 1fr;
+            gap: 20px;
           }
           .srv-process-grid {
             grid-template-columns: 1fr;
+            gap: 14px;
           }
           .srv-cta-card {
-            padding: 44px 20px;
+            padding: 36px 18px;
+            border-radius: 20px;
+          }
+          .srv-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+          .srv-btn-cta-white,
+          .srv-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
           }
         }
       `}</style>

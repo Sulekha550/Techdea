@@ -23,6 +23,7 @@ import {
 } from "../../services/courseService.js";
 import { useAuth } from "../../context/AuthContext.jsx";
 import Loader from "../../components/common/Loader.jsx";
+import { getCuratedThumbnail } from "../../components/course/CourseCard.jsx";
 
 export default function CourseDetails() {
   const { id } = useParams();
@@ -383,8 +384,11 @@ export default function CourseDetails() {
           <aside className="enroll-sticky-card">
             <div style={{ marginBottom: 16 }}>
               <img
-                src={course.thumbnail || course.image || "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800&auto=format&fit=crop"}
+                src={getCuratedThumbnail(course)}
                 alt={course.name}
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80";
+                }}
                 style={{ width: "100%", borderRadius: 10, aspectRatio: "16/9", objectFit: "cover" }}
               />
             </div>
